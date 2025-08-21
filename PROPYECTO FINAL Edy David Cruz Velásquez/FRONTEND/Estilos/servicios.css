@@ -1,0 +1,124 @@
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: green;
+    padding: 10px 20px;
+}
+
+.logo{
+    height: 150px;
+}
+
+menu{
+    background-color: green;
+    padding: 10px;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    margin-left: 20px;
+    
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 40 px;
+
+
+}
+
+.menu a:hover {
+    color:#FFFF00;
+
+    }
+
+
+
+ .body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f1f1f1;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid #0000FF;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  animation: scroll 15s linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 25%;
+  height: 25%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-25%); }
+  50% { transform: translateX(-50%); }
+  75% { transform: translateX(-75%); }
+  100% { transform: translateX(0); }
+}
+    .fondo-texto {
+        background-image: url('../Recursos/ftpantalla3.jpg'); /* Ruta a tu imagen */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white; /* Hace que el texto contraste */
+        padding: 30px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    /* Oscurecer un poco el fondo para que el texto se lea mejor */
+    .fondo-texto::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* sombra oscura */
+        z-index: -1;
+    }
+    
+    .menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem; /* Mejor tamaño, usa rem para responsividad */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Fuente moderna y clara */
+    letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+body, p, .contenedor, .fondo-texto {
+    font-size: 1.2rem; /* Aumenta el tamaño general del texto */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: whitesmoke; /* Color oscuro para mejor contraste */
+}

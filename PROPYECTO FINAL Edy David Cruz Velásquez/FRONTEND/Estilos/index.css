@@ -1,0 +1,212 @@
+
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: green;
+    padding: 10px 20px;
+}
+
+.logo{
+    height: 150px;
+}
+
+menu{
+    background-color: green;
+    padding: 10px;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    margin-left: 20px;
+    
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 40 px;
+
+
+}
+
+.menu a:hover {
+    color:#FFFF00;
+
+    }
+
+    
+    
+  .body {
+  margin: 50px;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f1f1f1;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid #0000FF;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  animation: scroll 15s linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 25%;
+  height: 25%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-25%); }
+  50% { transform: translateX(-50%); }
+  75% { transform: translateX(-75%); }
+  100% { transform: translateX(0); }
+}
+
+    .fondo-texto {
+        background-image: url('../Recursos/ftmartinez.jpg'); /* Ruta a tu imagen */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white; /* Hace que el texto contraste */
+        padding: 30px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    /* Oscurecer un poco el fondo para que el texto se lea mejor */
+    .fondo-texto::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* sombra oscura */
+        z-index: -1;
+    }
+    .contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: justify;
+}
+p {
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.fondo-texto {
+    color: floralwhite; /* blanco */
+}
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem; /* Mejor tamaño, usa rem para responsividad */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Fuente moderna y clara */
+    letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+body, p, .contenedor, .fondo-texto {
+    font-size: 1.2rem; /* Aumenta el tamaño general del texto */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: whitesmoke; /* Color oscuro para mejor contraste */
+}
+
+/* Estilos para el mini anuncio de video */
+#video-popup {
+  display: none; /* Oculto por defecto, se muestra con JS */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  padding: 16px 16px 8px 16px;
+  max-width: 340px;
+  text-align: center;
+}
+
+#video-popup video {
+  width: 100%;
+  border-radius: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+#video-popup button:hover {
+  color: #d00;
+}
+/* Oculta el popup por defecto */
+#video-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor del video */
+.video-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  background-color: #000;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Botón de cerrar */
+#cerrar-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
